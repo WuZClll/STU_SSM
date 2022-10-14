@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    #?serverTimezone=UTC设置时区 2.4.2及以前版本会有这个问题，要设置时区
+    url: jdbc:mysql://localhost:3306/ssm_db?serverTimezone=UTC
+
+    username: root
+    password: 123456
+#    设druid数据源（前提：pom文件里引入druid依赖）
+    type: com.alibaba.druid.pool.DruidDataSource

@@ -1,0 +1,12 @@
+纯注解开发，不再需要配置文件 由配置类（com/itheima/config/SpringConfig.java）代替
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+<!--上下文组件扫描（设置扫描注释的位置）-->
+    <context:component-scan base-package="com.itheima"/>
+
+</beans>

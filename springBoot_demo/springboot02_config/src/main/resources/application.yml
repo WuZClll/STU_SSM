@@ -1,0 +1,16 @@
+#以后主要用这种
+#三种配置文件同时存在时 优先级：
+#  properties > yml > yaml
+server:
+  port: 81
+
+#默认值为info 控制台运行服务器生成的日志输出 warn:清爽，服务器运行时控制台只输出一点儿
+logging:
+  level:
+    root: debug #将debug的内容在服务器运行时一同输出
+
+#数组的格式
+likes:
+  - music
+  - game
+  - PE

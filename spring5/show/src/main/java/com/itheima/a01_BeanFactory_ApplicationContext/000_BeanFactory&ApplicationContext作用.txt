@@ -1,0 +1,14 @@
+BeanFactory 能干点啥
+     - 表面上只有 getBean
+     - 实际上控制反转、基本的依赖注入、直至 Bean 的生命周期的各种功能, 都由它的实现类提供
+BeanFactory 与 ApplicationContext关系
+   a. BeanFactory 与 ApplicationContext 并不仅仅是简单 接口继承 的关系,
+   ,ApplicationContext 组合并扩展了 BeanFactory 的功能
+      拓展了：（不仅仅实现了BeanFactory接口 还实现了）
+         MessageSource接口 具备翻译的能力 处理国际化资源 ApplicationContext实现的接口之一
+         ResourcePatternResolver接口 具备通配符 匹配资源 的能力  ApplicationContext实现的接口之一
+         EnvironmentCapable接口 读取一些 环境信息 返回系统配置的路径 ApplicationContext实现的接口之一
+         ApplicationEventPublisher接口 用来发 布事件 对象 ApplicationContext实现的接口之一
+             发布事件最大的作用是实现组件中的解耦
+
+ b. 又新学一种代码之间解耦途径  （事件）

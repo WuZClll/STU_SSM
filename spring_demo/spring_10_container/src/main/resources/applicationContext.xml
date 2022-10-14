@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl" lazy-init="true"/><!-- lazy-init="true"：延迟加载   不延迟加载时运行App.java会运行此bean（id为boolDao）的无参构造方法
+    XmlBeanFactory自动延迟加载   ClassPathXmlApplicationContext不延迟加载，但可配置lazy-init="true"：延迟加载-->
+
+</beans>
